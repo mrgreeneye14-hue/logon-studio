@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Logon™ — Software Studio</title>
+    <style>
+        /* Сброс стилей */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Основной контент (слева) */
+        .main-content {
+            flex: 1; /* Занимает всё свободное место */
+            padding: 40px;
+            max-width: 800px;
+        }
+
+        h1 { color: #00ffcc; font-size: 36px; margin-bottom: 20px; }
+        p { line-height: 1.6; margin-bottom: 15px; color: #b0b0b0; }
+
+        /* Стильный баннер "В разработке" */
+        .dev-banner {
+            background: linear-gradient(90deg, #ff8c00, #ff2a2a);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(255, 42, 42, 0.2);
+        }
+
+        .project-card {
+            background: #2D3943;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00ffcc;
+            position: relative;
+        }
+
+        /* Метка "В разработке" на карточках */
+        .status-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #444;
+            color: #ffaa00;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Кнопка (пока неактивная) */
+        .download-btn {
+            background: #333;
+            color: #888;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: inline-block;
+            cursor: not-allowed;
+            border: 2px dashed #444;
+        }
+
+        /* Боковая панель с рекламой (справа) */
+        .sidebar {
+            width: 300px;
+            background-color: #23232e;
+            padding: 20px;
+            border-left: 1px solid #333;
+        }
+
+        .ad-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #111;
+            border: 2px dashed #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        /* Для мобильных телефонов */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; border-left: none; border-top: 1px solid #333; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Левая часть (твой контент) -->
+    <div class="main-content">
+        <h1>Logon™ Studio</h1>
+        
+        <!-- БАННЕР О РАЗРАБОТКЕ -->
+        <div class="dev-banner">
+            <span style="font-size: 24px;">🚧</span>
+            <div>
+                Внимание! Наши проекты находятся в стадии активной разработки. 
+                Скоро здесь появятся ссылки для скачивания.
+            </div>
+        </div>
+
+        <p>Добро пожаловать в мир наших технологий. Мы создаем операционные системы и сетевые решения.</p>
+        
+        <div class="project-card">
+            <span class="status-badge">В разработке</span>
+            <h3>💻 Logon OS</h3>
+            <p>Наша собственная операционная система, написанная с нуля на языке Logon. Сейчас мы работаем над графическим интерфейсом.</p>
+        </div>
+        
+        <div class="project-card">
+            <span class="status-badge">В разработке</span>
+            <h3>🛠 OpenSLDK</h3>
+            <p>Набор инструментов для разработчиков. Включает компиляторы, библиотеки и среду разработки. Мы готовим стабильную версию.</p>
+        </div>
+
+        <!-- Неактивная кнопка -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="download-btn">
+                ⏳ Установщик скоро появится
+            </a>
+            <p style="margin-top: 10px; font-size: 14px; color: #888;">
+                Следите за обновлениями!
+            </p>
+        </div>
+    </div>
+
+    <!-- Правая часть (Место под рекламу и Discord) -->
+    <div class="sidebar">
+        <h3 style="color: #888; text-align: center; margin-bottom: 15px;">Реклама</h3>
+        
+        <!-- Блок рекламы 1 (Главный) -->
+        <div class="ad-placeholder">
+            <span>Здесь могла быть<br>ваша реклама<br><br><b style="color: #00ffcc; font-size: 18px;">100 руб/мес</b></span>
+        </div>
+
+        <!-- Блок рекламы 2 (Баннер) -->
+        <div class="ad-placeholder">
+            <span>Место для баннера<br><br><b style="color: #00ffcc; font-size: 18px;">60 руб/мес</b></span>
+        </div>
+        
+        <!-- Кнопка Discord с твоей ссылкой -->
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="font-size: 14px; color: #888; margin-bottom: 10px;">
+                Есть вопросы? Заходи в наш Discord!
+            </p>
+            <a href="https://discord.gg/rfFMYEcVD" target="_blank" style="
+                background: #5865F2; /* Официальный цвет Discord */
+                color: white;
+                padding: 12px 20px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 8px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                box-shadow: 0 4px 10px rgba(88, 101, 242, 0.3);
+                transition: 0.3s;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" width="20" height="20" alt="Discord">
+                Присоединиться
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
